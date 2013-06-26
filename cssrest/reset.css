@@ -1,0 +1,63 @@
+/* ====================================
+ *
+ *	Css Reset 
+ *	Author: 吴小钱(wuchunlei@live.com) 
+ *  Version: 0.6
+ *  Refs: http://docs.kissyui.com/kissy-dpl/base/assets/reset.css
+ *
+ * ==================================== */
+
+/* 清除标签默认内(外)边距 */
+body, p,
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl, dt, dd, 
+th, td,
+form, input, select, textarea, button { margin: 0; padding: 0}
+
+/* 清除列表默认样式 */
+ul, ol { list-style: none}
+
+/* 重设A标签样式 */
+a { text-decoration: none}
+a:hover { text-decoration: underline}
+
+/* 清除图片标签边框 */
+img { border: none}
+
+/* 设置全局字体 */
+body { font: 12px/1.5 Arial, sans-serif}
+
+/* 统一标题字号 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%}
+
+/* 强制统一表单字体 */
+input, select, textarea, button { font: 12px/1.5 Arial, sans-serif}
+
+/* 清除表格默认样式 */
+table { border-collapse: collapse; border-spacing: 0}
+
+/* 清除某些元素默认样式 */
+em { font-style: normal}
+
+
+/* =========== 个性化（根据需求自行修改） ===============*/
+
+/* 强制背景色 */
+html, body { background-color: #fff;}
+
+/* 整体排版设置包括（字体，行距，颜色） */
+body {
+	/* font: Arial, \5B8B\4F53, sans-serif; (已有默认样式，如果需修改可按该格式自行修改) */
+	color: #000;
+}
+
+/* 链接颜色设置 */
+a { color: #555} /*默认*/
+a:hover { color: #555;} /*鼠标悬停*/
+
+
+
+
+
+
+

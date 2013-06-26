@@ -1,0 +1,40 @@
+body { margin: 0 auto;}
+
+.w950 { width: 950px;}
+h1 { font-size: 18px; font-family: \5FAE\8F6F\96C5\9ED1;}
+h4 { font-size: 14px;}
+textarea { width: 100%; border: 1px solid #ccc;}
+
+#header h1 { padding: 20px 0; text-align: center;}
+#content { border: 2px dashed #ccc; padding: 16px;}
+.demo { margin-bottom: 20px;}
+.demo .tabs-line { position: relative; height: 5px; margin: 5px 0 35px; background-color: #555;}
+.demo .tabs-line li { position: absolute; top: -10px; margin-left: -25px;}
+.demo .tabs-line li a { display: block; width: 50px; text-align: center; font-weight: bold; color: #555;}
+.demo .tabs-line li a:hover { text-decoration: none;}
+.demo .tabs-line li s { display: block; width: 25px; height: 20px; padding-top: 5px; margin: 0 auto; background-color: #fff; cursor: pointer;}
+.demo .tabs-line li b {
+	display: block;
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	background-color: #555;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.demo .tabs-line li span { display: block; cursor: pointer;}
+.demo .tabs-line .trigger-demo { left: 20%}
+.demo .tabs-line .trigger-html { left: 50%;}
+.demo .tabs-line .trigger-css { left: 80%}
+.demo .tabs-line .trigger-demo a:hover { color: #f00;}
+.demo .tabs-line .trigger-html a:hover { color: #0f0;}
+.demo .tabs-line .trigger-css a:hover { color: #00f;}
+.demo .tabs-line .trigger-demo a:hover b { background-color: #f00;}
+.demo .tabs-line .trigger-html a:hover b { background-color: #0f0;}
+.demo .tabs-line .trigger-css a:hover  b { background-color: #00f;}
+.demo .pane { border: 5px solid #ccc; padding: 10px; zoom: 1;}
+.demo .pane:after { content: ' '; display: block; clear: both; height: 0; overflow: hidden;}
+#footer { padding: 10px 0;}
+#footer ul { padding: 5px 18px; list-style: disc outside none;}
+#footer ul li { margin: auto; padding: auto;}

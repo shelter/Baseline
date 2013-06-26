@@ -1,0 +1,30 @@
+﻿/* ====================================
+ *
+ *	fixes 
+ *	Author: 吴小钱(wuchunlei@live.com) 
+ *  Version: 0.4
+ *
+ * ==================================== */
+
+/*
+* 清除浮动
+*/
+.fix-float { *zoom: 1;}
+.fix-float:after { content: '\20'; display: block; height: 0; clear: both;}
+
+/*
+* IE6添加图片缓存
+*/
+* html { zoom:expression( function(ele) { ele.style.zoom="1"; document.execCommand("BackgroundImageCache", false, true)}(this))}
+
+/*
+* IE6 模拟fixed
+*/
+* html { background-image:url(about:blank); background-attachment: fixed;}
+
+/*清楚chrome自带focus样式*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	:focus {
+		outline: none;
+	}
+}

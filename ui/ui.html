@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baseline ui</title>
+  <link rel="stylesheet" href="../cssrest/reset.css" />
+  <link rel="stylesheet" href="resource/style.css" />
+</head>
+<body class="w950">
+	<div id="header">
+		<h1>Baseline - UI 组件集合</h1>
+	</div>
+	<div id="content">
+		<!-- Box -->
+		<h4>Box</h4>
+		<div id="BoxDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.box{margin-bottom:10px; zoom: 1;}
+					.box .box-hd{position:relative;height:29px;padding:0 10px;border:1px solid #d1d1d1;border-bottom:none;background:#e4e4e4 url(resource/bg-repeatx.png) repeat-x 0 -10px;}
+					.box .box-hd i{float:left;width:16px;height:16px;margin:6px 2px 0 0; background: url(resource/glyphicons-halflings.png) no-repeat 0 0;}
+					.box .box-hd h3{float:left;line-height:28px;}
+					.box .box-act{float:right;margin-top:6px;}
+					.box .box-act a{float:right;margin-left:6px;line-height:16px;}
+					.box .box-bd{padding:10px;border:1px solid #d1d1d1;background:#fff;}
+
+					.box .box-tp,
+					.box .box-bt{display:block;position:relative;height:4px;overflow:hidden;margin:0 0 -4px 0;z-index:10;}
+					.box .box-bt{margin:-4px 0 0 0;}
+					.box .box-tp b,
+					.box .box-bt b{display:block;float:right;width:4px;height:4px;overflow:hidden;}
+					.box .box-tp,
+					.box .box-tp b,
+					.box .box-bt,
+					.box .box-bt b{background:url(resource/bg-repeatx.png) no-repeat -3px -3px;}
+					.box .box-tp b{background-position:0 -3px;}
+					.box .box-bt{background-position:-3px 0;}
+					.box .box-bt b{background-position:0 0;}
+				</style>
+				<div class="code-html">
+					<div class="box">
+						<s class="box-tp"><b></b></s>
+						<div class="box-hd">
+							<i></i><h3>标题</h3>
+							<div class="box-act"><a href="#">更多</a></div>
+						</div>
+						<div class="box-bd">
+							<!-- your code here -->
+						</div>
+						<s class="box-bt"><b></b></s>
+					</div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Tabs -->
+		<h4>Tabs</h4>
+		<div id="TabsDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.tabs{margin-bottom:10px; zoom: 1;}
+					.tabs .tabs-hd{height:29px;overflow:hidden;margin-bottom:-1px;border:1px solid #d1d1d1;border-bottom:none;background:#e4e4e4 url(resource/bg-repeatx.png) repeat-x 0 -10px;}
+					.tabs .tabs-hd .tabs-trigger{position:relative;float:left;height:28px;padding-left:12px;cursor:pointer;border-right:1px solid #d1d1d1;}
+					.tabs .tabs-hd h3{float:left;padding-right:12px;line-height:28px;}
+					.tabs .tabs-hd a{display:block;}
+					.tabs .tabs-hd i{float:left;width:16px;height:16px;margin:6px 2px 0 0; background: url(resource/glyphicons-halflings.png) no-repeat 0 0;}
+					.tabs .tabs-hd .tabs-active{ height: 29px; background:#fff;}
+					.tabs .tabs-panel{ padding: 10px; border:1px solid #d1d1d1;background:#fff;}
+
+					.tabs .tabs-tp,
+					.tabs .tabs-bt{display:block;position:relative;height:4px;overflow:hidden;margin:0 0 -4px 0;z-index:10;}
+					.tabs .tabs-bt{margin:-4px 0 0 0;}
+					.tabs .tabs-tp b,
+					.tabs .tabs-bt b{display:block;float:right;width:4px;height:4px;overflow:hidden;}
+					.tabs .tabs-tp,
+					.tabs .tabs-tp b,
+					.tabs .tabs-bt,
+					.tabs .tabs-bt b{background:url(resource/bg-repeatx.png) no-repeat -3px -3px;}
+					.tabs .tabs-tp b{background-position:0 -3px;}
+					.tabs .tabs-bt{background-position:-3px 0;}
+					.tabs .tabs-bt b{background-position:0 0;}
+				</style>
+				<div class="code-html">
+					<div class="tabs">
+						<s class="tabs-tp"><b></b></s>
+						<ul class="tabs-hd">
+							<li class="tabs-trigger tabs-active">
+								<i></i><h3>Tab1</h3>
+							</li>
+							<li class="tabs-trigger">
+								<i></i><h3>Tab2</h3>
+							</li>
+							<li class="tabs-trigger">
+								<i></i><h3><a href="#">Tab3</a></h3>
+							</li>
+						</ul>
+						<div class="tabs-bd">
+							<div class="tabs-panel" style="display:none;">
+							<!-- your code here -->
+							</div>
+							<div class="tabs-panel">
+							<!-- your code here -->
+							</div>
+							<div class="tabs-panel" style="display:none;">
+							<!-- your code here -->
+							</div>
+						</div>
+						<s class="tabs-bt"><b></b></s>
+					</div>					
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Slider -->
+		<h4>Slider</h4>
+		<div id="SliderDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+                    .slider { position: relative; width: 490px; height: 170px;}
+                    .slider .slider-bd { position: relative; width: 488px; height: 168px; border: 1px solid #d1d1d1; overflow: hidden;}
+                    .slider .slider-content { position: absolute; width: 99999px; height: 99999px;}
+                    .slider .slider-content li { position: absolute; z-index: 10;}
+                    .slider .slider-content li img { display:  block;}
+                    .slider .slider-nav { position: absolute; bottom: 10px; right: 10px; z-index: 30;}
+                    .slider .slider-nav li { float: left; width: 20px; height: 20px; margin-left: 5px; line-height: 20px; text-align: center; background-color: #555; color: #fff; cursor: pointer;}
+                    .slider .slider-nav .slider-active { background-color: #ccc;}
+				</style>
+				<div class="code-html">
+                    <div class="slider">
+                        <div class="slider-bd">
+                           <ol class="slider-content">
+                               <li><a href="#"><img src="pic-a.png" /></a></li>
+                               <li style="display: none"><img src="pic-b.png" /></li>
+                               <li style="display: none"><img src="pic-c.png" /></li>
+                           </ol>
+                        </div>
+                        <ul class="slider-nav">
+                            <li class="slider-active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Scroller -->
+		<h4>Scroller</h4>
+		<div id="ScrollerDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+                    .scroller { position: relative; width: 670px; padding: 30px 60px 0}
+                    .scroller .scroller-bd { position: relative; width: 670px; height: 150px; overflow:  hidden;}
+                    .scroller .scroller-content { position: absolute; width: 99999px; height: 99999px;}
+                    .scroller .scroller-content li { float: left; text-align: center;}
+                    .scroller .scroller-content li a { float: left; width: 160px; margin-right: 10px;}
+                    .scroller .scroller-content li img { display: block; margin-bottom: 4px;}
+                    .scroller .scroller-nav { position: absolute; top: 5px; right: 60px; z-index: 30;}
+                    .scroller .scroller-nav li { float: left; width: 20px; height: 20px; margin-left: 5px; line-height: 20px; text-align: center; background-color: #555; color: #fff; cursor: pointer;}
+                    .scroller .scroller-nav .scroller-active { background-color: #ccc;}
+                    .scroller .scroller-prev, .scroller .scroller-next { position: absolute; top: 80px; cursor: pointer;}
+                    .scroller .scroller-prev { left: 0;}
+                    .scroller .scroller-next { right: 0;}
+                    .scroller .scroller-disable { color: #ccc; cursor: default;}
+				</style>
+				<div class="code-html">
+                    <div class="scroller">
+                        <div class="scroller-bd">
+                            <ol class="scroller-content">
+                                <li>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                    <a href="#"><img src="test.jpg" alt="" width="160" height="120"><span>标题</span></a>
+                                </li>
+                            </ol>
+                        </div>
+                        <ul class="scroller-nav">
+                            <li class="scroller-active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                        <div class="scroller-extra">
+                            <span class="scroller-prev scroller-disable">&lt; 上一页</span>
+                            <span class="scroller-next">下一页 &gt;</span>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Accordion -->
+		<h4>Accordion</h4>
+		<div id="AccordionDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+.accordion { padding-bottom: 1px;}
+.accordion-trigger { position:relative;height:29px;padding:0 10px;border:1px solid #d1d1d1; margin-bottom: -1px; background:#e4e4e4 url(resource/bg-repeatx.png) repeat-x 0 -10px; cursor: pointer;}
+.accordion-trigger i { float: left; width:16px;height:16px;margin:6px 2px 0 0; background: url(resource/glyphicons-halflings.png) no-repeat 0 0;}
+.accordion-trigger h5 {line-height:28px;}
+.accordion-trigger .accordion-toggle { position: absolute; top: 8px; right: 6px; width: 16px; height: 16px; background: url(resource/toggle.png) no-repeat 0 0;}
+.accordion .accordion-expand .accordion-toggle { background-position: -20px 0;}
+.accordion-pane { padding: 10px; border:1px solid #d1d1d1; margin-bottom: -1px; background:#fff;}
+
+.accordion .accordion-tp,
+.accordion .accordion-bt{display:block;position:relative;height:4px;overflow:hidden;margin:0 0 -4px 0;z-index:10;}
+.accordion .accordion-bt{margin:-4px 0 0 0;}
+.accordion .accordion-tp b,
+.accordion .accordion-bt b{display:block;float:right;width:4px;height:4px;overflow:hidden;}
+.accordion .accordion-tp,
+.accordion .accordion-tp b,
+.accordion .accordion-bt,
+.accordion .accordion-bt b{background:url(resource/bg-repeatx.png) no-repeat -3px -3px;}
+.accordion .accordion-tp b{background-position:0 -3px;}
+.accordion .accordion-bt{background-position:-3px 0;}
+.accordion .accordion-bt b{background-position:0 0;}
+
+                </style>
+				<div class="code-html">
+<div class="accordion">
+    <s class="accordion-tp"><b></b></s>
+	<div class="accordion-trigger accordion-expand">
+		<i></i><h5>标题</h5><span class="accordion-toggle"></span>	
+	</div>
+	<div class="accordion-pane">内容</div>
+	<div class="accordion-trigger">
+		<i></i><h5>标题</h5><span class="accordion-toggle"></span>	
+	</div>
+	<div class="accordion-pane" style=" display: none;"></div>
+	<div class="accordion-trigger">
+		<i></i><h5>标题</h5><span class="accordion-toggle"></span>
+	</div>
+	<div class="accordion-pane" style=" display: none;"></div>
+    <s class="accordion-bt"><b></b></s>
+</div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Crumbs -->
+		<h4>Crumbs</h4>
+		<div id="CrumbsDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.crumbs-nav .crumbs-nav-bd i {background: url(resource/glyphicons-halflings.png) no-repeat 0 -24px;}
+					.crumbs-nav {}
+					.crumbs-nav .crumbs-nav-bd {height:22px;padding: 4px 10px;}
+					.crumbs-nav .crumbs-nav-bd i {float: left;width: 16px;height: 16px;overflow: hidden;margin: 2px 2px 0 0;}
+				</style>
+				<div class="code-html">
+					<div class="crumbs-nav">
+						<div class="crumbs-nav-bd">
+							<i></i><span>当前位置：</span> <a href="#">首页</a> &gt; <a href="#">列表</a> &gt; <span>内容</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Pagination -->
+		<h4>Pagination</h4>
+		<div id="PaginDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.pagination a{background:url(resource/pagination.png)}
+					.pagination{display:inline; position:relative; left:50%; float:left; height:28px; padding:20px 0}
+					.pagination .pagination-wrap{float:left; left:-50%; position:relative}
+					.pagination a{color:#34699f; text-decoration:none}
+					.pagination a:hover{text-decoration:none}
+					.pagination .pagination-prev, .pagination .pagination-next{float:left; height:28px; line-height:28px; margin-right:2px; text-align:center; white-space:nowrap; width:66px}
+					.pagination .pagination-prev{background-position:0 0}
+					.pagination .pagination-next{background-position:0 -29px}
+					.pagination .pagination-num{float:left; white-space:nowrap}
+					.pagination .pagination-num a, .pagination .pagination-num span{float:left; height:28px; line-height:28px; margin-right:2px; text-align:center; width:30px}
+					.pagination .pagination-num a{background-position:-66px 0}
+					.pagination .pagination-num a:hover{background-position:-96px 0; color:#fff}
+					.pagination .pagination-num .pagination-active, .pagination .pagination-num .pagination-active:hover{background:none repeat scroll 0 0 transparent; color:#f60; font-weight:bold}
+				</style>
+				<div class="code-html">
+					<div class="pagination">
+						<div class="pagination-wrap">
+							<a href="#" class="pagination-prev">上一页</a>
+							<div class="pagination-num">
+								<a href="#" class="pagination-active">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<span>...</span>
+								<a href="#">50</a>
+							</div>
+							<a href="#" class="pagination-next">下一页</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Search -->
+		<h4>Search</h4>
+		<div id="SearchDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.search h3{background:url(resource/glyphicons-halflings.png) no-repeat -48px 0}
+					.search .search-submit{background:url(resource/search-submit.png) no-repeat 0 0}
+					.search{margin-bottom:10px; *zoom:1}
+					.aearch:after{content:'\20'; display:block; height:0; clear:both}
+					.search h3{float:left; width:16px; height:16px; margin:7px 5px 0 0; overflow:hidden; text-indent:-99999px}
+					.search .search-field{position:relative; float:left; margin-right:5px}
+					.search .search-label{position:absolute; top:7px; left:3px; color:#aaa; z-index:9}
+					.search .search-input{float:left; width:200px; height:25px; padding:2px; border:1px solid #d1d1d1; line-height:26px; background-color:#fff; vertical-align:middle}
+					.search .search-type{margin-top:5px}
+					.search .search-submit{float:left; width:64px; height:32px; border:0 none; cursor:pointer}
+				</style>
+				<div class="code-html">
+					<div class="search">
+						<h3>搜索：</h3>
+						<div class="search-bd">
+							<div class="search-field">
+								<label class="search-label" for="q" style="display: block; ">请输入关键字</label>
+								<input type="text" autocomplete="off" id="q" class="search-input" />
+							</div>
+							<div class="search-field">
+								<select class="search-type"><option>分类(暂时解决方案)</option></select>
+							</div>
+							<button type="submit" class="search-submit">搜索</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Info-List -->
+		<h4>Info-List</h4>
+		<div id="InfoListDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.info-list li { background: url(resource/dot.png) no-repeat 0 50%;}
+					.info-list {}
+					.info-list li { padding: 2px 0 2px 12px;}
+					.info-list .act { float: right;}
+				</style>
+				<div class="code-html">
+					<ul class="info-list">
+						<li>
+							<span class="act">
+								<span>2012-08-24</span> <span>已有2012人浏览</span>
+							</span>
+							<a href="#">2012年度学习中心表彰</a>
+						</li>
+					  <li><a href="#">中南财经政法大学网络教育学院彭小霞院...</a></li>
+					  <li><a href="#">我院参加2011继续教育数字化学习资源共...</a></li>
+					  <li><a href="#">我院荣获“2011中国十大品牌网络教育学...</a></li>
+					  <li><a href="#">我院通过ISO质量保障体系再认证审核</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Img-List -->
+		<h4>Img-List</h4>
+		<div id="ImgListDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.img-list { padding: 10px 0 0 10px; *zoom: 1;}
+					.img-list:after { content: '\20'; display: block; height: 0; clear: both;}
+					.img-list li { float: left; padding: 0 10px 10px 0; text-align: center;}
+					.img-list li a img { display: block; padding: 2px; border:1px solid #ccc; margin-bottom: 4px;}
+				</style>
+				<div class="code-html">
+					<ul class="img-list">
+						<li><a href="#"><img src="test.jpg" alt="" width="160" height="120" /><span>标题</span></a></li>
+						<li><a href="#"><img src="test.jpg" alt="" width="160" height="120" /><span>标题</span></a></li>
+						<li><a href="#"><img src="test.jpg" alt="" width="160" height="120" /><span>标题</span></a></li>
+						<li><a href="#"><img src="test.jpg" alt="" width="160" height="120" /><span>标题</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+		<!-- Card-list -->
+		<h4>Card-List</h4>
+		<div id="CardListDemo" class="demo">
+			<ul class="tabs-line">
+				<li class="trigger trigger-demo"><a href="javascript:void(0)"><s><b></b></s><span>DEMO</span></a></li>
+				<li class="trigger trigger-html"><a href="javascript:void(0)"><s><b></b></s><span>HTML</span></a></li>
+			  	<li class="trigger trigger-css"><a href="javascript:void(0)"><s><b></b></s><span>CSS</span></a></li>
+			</ul>	
+			<div class="pane pane-demo" style="display: block;">
+				<style type="text/css" class="code-css">
+					.card-list {}
+					.card-list li { position: relative; padding: 10px 0; *zoom:1;}
+					.card-list li:after {content: '\20'; display: block; height: 0; clear: both;}
+					.card-list .img img { float: left; padding: 2px; border:1px solid #ccc; margin-right: 20px;}
+					.card-list h5 {padding: 5px 0; font-size: 14px;}
+					.card-list .desc { line-height: 1.8;}
+					.card-list .act .more { position: absolute; top: 18px; right: 10px;}
+				</style>
+				<div class="code-html">
+					<ul class="card-list">
+						<li>
+							<div class="img"><img src="test.jpg" width="160" height="120" /></div>
+							<h5>标题</h5>
+							<p class="desc">网海学涯共携手，不尽英才遍神州 ——东北财经大学网络教育学院院长致辞   日新月异的经济建设在呼唤人才，而我国的高等教育刚刚迈入大众教育的门槛。有限的高等教育资源只能以应试的方式筛选入围者，而这把...</p>
+							<div class="act">
+								<a href="#" class="more">详细介绍</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pane pane-html" style=" display: none;">
+				<textarea class="view-code-html"></textarea>
+			</div>
+			<div class="pane pane-css" style=" display: none;">
+				<textarea class="view-code-css"></textarea>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<h4>Refs:</h4>
+		<ul>
+		  <li><a href="http://docs.kissyui.com/kissy-dpl/base/index.html" target="_blank">Kissy UI - DPL(old)</a></li>
+		  <li><a href="http://glyphicons.com/" target="_blank">Icon by glyphicons</a></li>
+		  <li><a href="#" target="_blank">...</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="resource/script.js"></script>
+	<script type="text/javascript">
+		arrEach('Box,Tabs,Slider,Scroller,Accordion,Crumbs,Pagin,Search,InfoList,ImgList,CardList'.split(','), function(item) {
+			item = item + 'Demo';
+			tabs(item);
+			viewCodes(item);
+		});	
+	</script>
+</body>
+</html>
