@@ -1,12 +1,29 @@
 <!doctype html>
-<html lang="zh-CN">
+<html>
 	<head>
 		<meta charset="utf-8" />
-		<title>your title</title>
-		<link rel="stylesheet"  href="css_example_url" />
-		<script src="js_example_url"></script>
+		
+		<!-- 站点标题，关键字，及站点表述（通常用于搜索引擎爬虫检索） -->
+		<title></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<!-- 所有外联样式表文件 -->	
+		<link href="" rel="stylesheet" />
+		<!-- 所有外联脚本文件 -->
+		<script src=""></script>
+
 	</head>
 	<body>
-		<!-- 内容在此 *_#! -->
+		<!-- 页面内容 -->
+		<div id="page"></div>
+
+		<!-- 脚本执行命令 -->
+		<script>
+			//所有脚本的执行定义在此处
+			$(function() {
+				doSomething();
+			});
+		</script>
 	</body>
 </html>
