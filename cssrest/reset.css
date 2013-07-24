@@ -47,7 +47,7 @@ html, body { background-color: #fff;}
 
 /* 整体排版设置包括（字体，行距，颜色） */
 body {
-	/* font: Arial, \5B8B\4F53, sans-serif; (已有默认样式，如果需修改可按该格式自行修改) */
+	/* font-family: Arial, \5B8B\4F53, sans-serif; (已有默认样式，如果需修改可按该格式自行修改) */
 	color: #000;
 }
 
