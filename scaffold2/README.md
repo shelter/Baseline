@@ -4,7 +4,6 @@
 * breakpoint 选择 > 1200s show 1200c gap 30 | 1200s - 992s 960c gap: 20 | 922s- 768s 744c gap: 20 | < 768s 100%c gap: 30
 * 采用12列布局定寛
 * 命名方式完全遵照bootstrap3 grid
-* HTML 结构 最多只允许嵌套2层 （与bootstrap3 略微不同） -- 待定
 
 > ##notice
 > - IE7和IE6 像素单位 只支持整数 3px正确 3.5px正确  百分比单位 支持小数点后1位 30.5%正确 30.33%错误
