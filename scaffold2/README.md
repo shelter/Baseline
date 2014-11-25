@@ -18,11 +18,13 @@
             </div>
         </div>
         <div class="col col-3">
-            <div class="col col-7 push-3">
-                <div class="col-wrap"></div>
-            </div>
-            <div class="col col-3 pull-7">
-                <div class="col-wrap"></div>
+            <div class="row">
+                <div class="col col-7 push-3">
+                    <div class="col-wrap"></div>
+                </div>
+                <div class="col col-3 pull-7">
+                    <div class="col-wrap"></div>
+                </div>
             </div>
         </div>
     </div>
