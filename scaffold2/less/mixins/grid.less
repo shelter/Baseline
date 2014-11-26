@@ -1,0 +1,17 @@
+// == Grid system
+//
+// ## Generate semantic grid columns with this mixins
+
+// Centered container element
+.container-fixed() {
+    margin-left: auto;
+    margin-right: auto;
+
+    &:extend(.clearfix all);
+}
+
+// Creates a wrapper for a series of columns
+.make-row (@gutter: @grid-gutter-width-md) {
+    margin-left: -@gutter;
+    &:extend(.clearfix all);
+}
