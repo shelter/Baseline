@@ -15,3 +15,16 @@
 > ##notice
 > - IE7和IE6 像素单位 只支持整数 3px正确 3.5px正确  百分比单位 支持小数点后1位 30.5%正确 30.33%错误
 > - 现代浏览器保留小数点后3位.
+
+
+
+|Type | Elements
+|------|----------
+|Headings | `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`
+|Prose |  `p`, `div`, `blockquote`
+|Formatted | `pre`
+| Inline | `b`, `i`, `strong`, `em`, `tt`, `code`, `ins`, `del`, `sup`, `sub`, `kbd`, `samp`, `q`, `var`
+| Lists | `ol`, `ul`, `li`, `dl`, `dt`, `dd`
+| Tables | `table`, `thead`, `tbody`, `tfoot`, `tr`, `td`, `th`
+| Breaks | `br`, `hr`
+| Ruby (East Asian) | `ruby`, `rt`, `rp`
