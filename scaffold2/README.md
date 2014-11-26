@@ -2,6 +2,16 @@
 
 * 为IE浏览器选择基本点 1024 分辨率
 * breakpoint 选择
+---------------------------
+
+|屏幕宽度(screen with)|容器宽度(container width)|列间距(gutter)
+|:-------------------|:-----------------------|:-------------
+|> 1200px            |1170px                  |30px
+|1200 - 992px        |940px                   |20px
+|992 - 768px         |724px                   |20px
+|< 768px             |100%                    |30px
+
+
 
 * 采用12列布局定寛
 * 命名方式完全遵照bootstrap3 grid
@@ -12,21 +22,6 @@
 
 
 
-|Type | Elements
-|------|----------
-|Headings | `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`
-|Prose |  `p`, `div`, `blockquote`
-|Formatted | `pre`
-| Inline | `b`, `i`, `strong`, `em`, `tt`, `code`, `ins`, `del`, `sup`, `sub`, `kbd`, `samp`, `q`, `var`
-| Lists | `ol`, `ul`, `li`, `dl`, `dt`, `dd`
-| Tables | `table`, `thead`, `tbody`, `tfoot`, `tr`, `td`, `th`
-| Breaks | `br`, `hr`
-| Ruby (East Asian) | `ruby`, `rt`, `rp`
 
-|屏幕宽度(screen with)|容器宽度(container width)|列间距(gutter)
-|:-------------------|:-----------------------|:-------------
-|> 1200px            |1170px                  |30px
-|1200 - 992px        |940px                   |20px
-|992 - 768px         |724px                   |20px
-|< 768px             |100%                    |30px
+
 
