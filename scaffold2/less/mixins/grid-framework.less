@@ -71,6 +71,7 @@
     .col(@index, @list) when (@index > @grid-columns) { // terminal
         @{list} {
             float: left;
+            _display: inline; // for ie6
         }
     }
     .col(1); // kickstart it
