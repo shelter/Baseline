@@ -6,6 +6,8 @@
     width: @container-md;
     @media (max-width: @screen-xs) {
         width: @container-xs;
+        padding-left: (@grid-gutter-width-xs/2);
+        padding-right: (@grid-gutter-width-xs/2);
     }
     @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
         width: @container-sm;
@@ -18,9 +20,9 @@
 // Row
 .row {
     .make-row();
-
-    @media (max-width: @screen-sm) {
-        .make-row(0);
+    @media (max-width: @screen-xs) {
+        .make-row((@grid-gutter-width-xs/2));
+        margin-right: ((@grid-gutter-width-xs/2) * -1);
     }
     @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
         .make-row(@grid-gutter-width-sm);
@@ -28,4 +30,31 @@
     @media (min-width: @screen-lg) {
         .make-row(@grid-gutter-width-lg);
     }
+}
+
+
+
+.make-grid-columns(md, @grid-gutter-width-md);
+@media (max-width: @screen-xs) {
+    .make-grid-columns();
+}
+@media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
+    .make-grid-columns(sm, @grid-gutter-width-sm);
+}
+@media (min-width: @screen-lg) {
+    .make-grid-columns(lg, @grid-gutter-width-lg);
+}
+
+
+
+
+.make-grid(md, @container-md, @grid-gutter-width-md);
+@media (max-width: @screen-xs) {
+    .make-grid(xs);
+}
+@media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
+    .make-grid(sm, @container-sm, @grid-gutter-width-sm);
+}
+@media (min-width: @screen-lg) {
+    .make-grid(sm, @container-lg, @grid-gutter-width-lg);
 }
