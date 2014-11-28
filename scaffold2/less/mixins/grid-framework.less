@@ -37,13 +37,13 @@
     .col(1);
 }
 
-.make-grid-columns() {
+.make-grid-columns(@class) {
     .col(@index) {
-        @item: ~".col-xs-@{index}";
+        @item: ~".col-@{class}-@{index}";
         .col((@index + 1), @item);
     }
     .col(@index, @list) when (@index <= @grid-columns) {
-        @item: ~".col-xs-@{index}";
+        @item: ~".col-@{class}-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
     .col(@index, @list) when (@index > @grid-columns) {
@@ -77,6 +77,26 @@
     .col(1); // kickstart it
 }
 
+.restore-grid-columns(@class) {
+    .col(@index) { // initial
+        @item: ~".col-@{class}-@{index}";
+        .col((@index + 1), @item);
+    }
+    .col(@index, @list) when (@index =< @grid-columns) { // general
+        @item: ~".col-@{class}-@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+    }
+    .col(@index, @list) when (@index > @grid-columns) { // terminal
+        @{list} {
+            float: none;
+            _display: block; // for ie6
+        }
+    }
+    .col(1); // kickstart it
+}
+
+
+
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = width) and (@index > 0) {
     .col-@{class}-@{index} {
         width: ((@container + @gutter) * (@index / @grid-columns) - @gutter);
@@ -84,7 +104,7 @@
 }
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = push) and (@index > 0) {
     .col-@{class}-push-@{index} {
-        left: ((@container + @gutter) * (@index / @grid-columns) - @gutter);
+        left: ((@container + @gutter) * (@index / @grid-columns));
     }
 }
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = push) and (@index = 0) {
@@ -95,7 +115,7 @@
 
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = pull) and (@index > 0) {
     .col-@{class}-pull-@{index} {
-        right: ((@container + @gutter) * (@index / @grid-columns) - @gutter);
+        right: ((@container + @gutter) * (@index / @grid-columns));
     }
 }
 
@@ -107,7 +127,7 @@
 
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = offset) and (@index > 0) {
     .col-@{class}-offset-@{index} {
-        margin-left: ((@container + @gutter) * (@index / @grid-columns) - @gutter);
+        padding-left: ((@container + @gutter) * (@index / @grid-columns));
     }
 }
 
@@ -143,6 +163,21 @@
     }
 }
 
+.restore-grid-column(@index, @class) when (@class = xs) {
+    .col-@{class}-@{index} {
+        width: auto;
+    }
+    .col-@{class}-push-@{index} {
+        left: auto;
+    }
+    .col-@{class}-pull-@{index} {
+        right: auto;
+    }
+    .col-@{class}-offset-@{index} {
+        margin-left: 0;
+    }
+}
+
 .loop-grid-columns(@index, @class, @type, @container, @gutter) when (@index >= 0) {
     .calc-grid-column(@index, @class, @type, @container, @gutter);
     .loop-grid-columns((@index - 1), @class, @type, @container, @gutter)
@@ -151,6 +186,12 @@
 .loop-grid-columns(@index, @class, @type) when (@index >= 0) {
     .calc-grid-column(@index, @class, @type);
     .loop-grid-columns((@index - 1), @class, @type);
+}
+
+
+.loop-restore-grid-columns(@index, @class) when (@index >= 0) {
+    .restore-grid-column(@index, @class);
+    .loop-restore-grid-columns((@index - 1), @class);
 }
 
 .make-grid(@class) {
@@ -167,4 +208,9 @@
     .loop-grid-columns(@grid-columns, @class, pull, @container, @gutter);
     .loop-grid-columns(@grid-columns, @class, push, @container, @gutter);
     .loop-grid-columns(@grid-columns, @class, offset, @container, @gutter);
+}
+
+.restore-grid(@class) {
+    .restore-grid-columns(@class);
+    .loop-restore-grid-columns(@grid-columns, @class);
 }

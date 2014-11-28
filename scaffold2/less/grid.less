@@ -32,29 +32,49 @@
     }
 }
 
-
+.make-grid-columns();
 
 .make-grid-columns(md, @grid-gutter-width-md);
+
+
 @media (max-width: @screen-xs) {
-    .make-grid-columns();
+    .make-grid-columns(lg);
+    .make-grid-columns(md);
+    .make-grid-columns(sm);
+    .make-grid-columns(xs);
 }
 @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
+    .make-grid-columns(lg, @grid-gutter-width-sm);
+    .make-grid-columns(md, @grid-gutter-width-sm);
     .make-grid-columns(sm, @grid-gutter-width-sm);
-}
-@media (min-width: @screen-lg) {
-    .make-grid-columns(lg, @grid-gutter-width-lg);
+    .make-grid-columns(xs, @grid-gutter-width-sm);
 }
 
+@media (min-width: @screen-md) {
+    .make-grid-columns(lg, @grid-gutter-width-md);
+    .make-grid-columns(sm, @grid-gutter-width-md);
+    .make-grid-columns(xs, @grid-gutter-width-md);
+}
+
+@media (min-width: @screen-lg) {
+    .make-grid-columns(lg, @grid-gutter-width-lg);
+    .make-grid-columns(md, @grid-gutter-width-lg);
+    .make-grid-columns(sm, @grid-gutter-width-lg);
+    .make-grid-columns(xs, @grid-gutter-width-lg);
+}
 
 
 
 .make-grid(md, @container-md, @grid-gutter-width-md);
 @media (max-width: @screen-xs) {
+    .restore-grid(md);
     .make-grid(xs);
 }
 @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
+    .restore-grid(md);
     .make-grid(sm, @container-sm, @grid-gutter-width-sm);
 }
 @media (min-width: @screen-lg) {
-    .make-grid(sm, @container-lg, @grid-gutter-width-lg);
+    .restore-grid(md);
+    .make-grid(lg, @container-lg, @grid-gutter-width-lg);
 }
