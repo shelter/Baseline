@@ -32,8 +32,10 @@
     }
 }
 
+//添加列默认方法
 .make-grid-columns();
 
+//1024宽度下列样式
 .make-grid-columns(md, @grid-gutter-width-md);
 
 
@@ -67,14 +69,14 @@
 
 .make-grid(md, @container-md, @grid-gutter-width-md);
 @media (max-width: @screen-xs) {
-    .restore-grid(md);
+    .restore-grid(md, 0);
     .make-grid(xs);
 }
 @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
-    .restore-grid(md);
+    .restore-grid(md, @grid-gutter-width-sm);
     .make-grid(sm, @container-sm, @grid-gutter-width-sm);
 }
 @media (min-width: @screen-lg) {
-    .restore-grid(md);
+    .restore-grid(md, @grid-gutter-width-lg);
     .make-grid(lg, @container-lg, @grid-gutter-width-lg);
 }

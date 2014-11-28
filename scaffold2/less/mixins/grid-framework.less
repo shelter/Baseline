@@ -2,6 +2,8 @@
 //
 // ## Used only by scaffold2 to generate a correct number of column classes given any value of `@grid-columns`
 
+
+//为各列添加默认样式
 .make-grid-columns() {
     .col(@index) {
         @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
@@ -20,6 +22,7 @@
     .col(1);
 }
 
+//为>768屏幕宽度的固定宽度列添加外边距
 .make-grid-columns(@class, @gutter) {
     .col(@index) {
         @item: ~".col-@{class}-@{index}";
@@ -37,6 +40,7 @@
     .col(1);
 }
 
+// <768屏幕宽度百分比宽度列添加内边距
 .make-grid-columns(@class) {
     .col(@index) {
         @item: ~".col-@{class}-@{index}";
@@ -89,7 +93,6 @@
     .col(@index, @list) when (@index > @grid-columns) { // terminal
         @{list} {
             float: none;
-            _display: block; // for ie6
         }
     }
     .col(1); // kickstart it
@@ -127,10 +130,9 @@
 
 .calc-grid-column(@index, @class, @type, @container, @gutter) when (@type = offset) and (@index > 0) {
     .col-@{class}-offset-@{index} {
-        padding-left: ((@container + @gutter) * (@index / @grid-columns));
+        margin-left: ((@container + @gutter) * (@index / @grid-columns) + @gutter);
     }
 }
-
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
     .col-@{class}-@{index} {
@@ -163,36 +165,47 @@
     }
 }
 
-.restore-grid-column(@index, @class) when (@class = xs) {
+
+
+.restore-grid-column(@index, @class, @type, @gutter) when(@type = width) and (@index > 0) {
     .col-@{class}-@{index} {
         width: auto;
     }
+}
+.restore-grid-column(@index, @class, @type, @gutter) when(@type = push) {
     .col-@{class}-push-@{index} {
         left: auto;
     }
+}
+.restore-grid-column(@index, @class, @type, @gutter) when(@type = pull) {
     .col-@{class}-pull-@{index} {
         right: auto;
     }
+}
+.restore-grid-column(@index, @class, @type, @gutter) when(@type = offset) and (@index > 0) {
     .col-@{class}-offset-@{index} {
-        margin-left: 0;
+        margin-left: @gutter;
     }
 }
+
+
 
 .loop-grid-columns(@index, @class, @type, @container, @gutter) when (@index >= 0) {
     .calc-grid-column(@index, @class, @type, @container, @gutter);
     .loop-grid-columns((@index - 1), @class, @type, @container, @gutter)
 }
-
 .loop-grid-columns(@index, @class, @type) when (@index >= 0) {
     .calc-grid-column(@index, @class, @type);
     .loop-grid-columns((@index - 1), @class, @type);
 }
 
 
-.loop-restore-grid-columns(@index, @class) when (@index >= 0) {
-    .restore-grid-column(@index, @class);
-    .loop-restore-grid-columns((@index - 1), @class);
+
+.loop-restore-grid-columns(@index, @class, @type, @gutter) when (@index >= 0) {
+    .restore-grid-column(@index, @class, @type, @gutter);
+    .loop-restore-grid-columns((@index - 1), @class, @type, @gutter);
 }
+
 
 .make-grid(@class) {
     .float-grid-columns(@class);
@@ -201,7 +214,6 @@
     .loop-grid-columns(@grid-columns, @class, push);
     .loop-grid-columns(@grid-columns, @class, offset);
 }
-
 .make-grid(@class, @container, @gutter) {
     .float-grid-columns(@class);
     .loop-grid-columns(@grid-columns, @class, width, @container, @gutter);
@@ -210,7 +222,11 @@
     .loop-grid-columns(@grid-columns, @class, offset, @container, @gutter);
 }
 
-.restore-grid(@class) {
+
+.restore-grid(@class, @gutter) {
     .restore-grid-columns(@class);
-    .loop-restore-grid-columns(@grid-columns, @class);
+    .loop-restore-grid-columns(@grid-columns, @class, width, @gutter);
+    .loop-restore-grid-columns(@grid-columns, @class, push, @gutter);
+    .loop-restore-grid-columns(@grid-columns, @class, pull, @gutter);
+    .loop-restore-grid-columns(@grid-columns, @class, offset, @gutter);
 }
