@@ -36,8 +36,10 @@
 .make-grid-columns();
 
 //1024宽度下列样式
+.make-grid-columns(xs, @grid-gutter-width-md);
+.make-grid-columns(sm, @grid-gutter-width-md);
 .make-grid-columns(md, @grid-gutter-width-md);
-
+.make-grid-columns(lg, @grid-gutter-width-md);
 
 @media (max-width: @screen-xs) {
     .make-grid-columns(lg);

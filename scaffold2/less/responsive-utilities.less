@@ -28,7 +28,9 @@
 .visible-sm-block,
 .visible-md-block,
 .visible-lg-block {
-    .responsive-invisibility();
+    @media (min-width: 0) { // fix old version ie bug due to they don't support media queries
+        .responsive-invisibility();
+    }
 }
 
 .visible-xs-block {
