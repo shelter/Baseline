@@ -1,0 +1,11 @@
+{
+  "name": "scaffold2",
+  "version": "0.0.9",
+  "author": "Mason Wu",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-less": "^0.12.0",
+    "load-grunt-tasks": "^1.0.0"
+  }
+}
