@@ -1,7 +1,8 @@
 {
   "name": "scaffold2",
-  "version": "0.0.9",
+  "version": "0.9.0",
   "author": "Mason Wu",
+    "homepage": "https://github.com/shelter/baseline/tree/master/scaffold2",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.10.0",

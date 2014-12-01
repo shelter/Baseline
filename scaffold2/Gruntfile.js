@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         less: {
             default: {
                 files: {
@@ -14,7 +15,11 @@ module.exports = function(grunt) {
         cssmin: {
             default: {
                 options: {
-                    banner: '/* scaffold2  */'
+                    banner: '/*!\n' +
+                    ' * scaffold2 v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+                    ' * <%= pkg.author %>\n' +
+                    ' */\n',
+                    keepSpecialComments: 0
                 },
                 files: {
                     'dist/css/scaffold2.min.css': ['dist/css/scaffold2.css']
