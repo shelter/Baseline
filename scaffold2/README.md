@@ -21,6 +21,12 @@
 
 > [关于gulp](http://blog.webbb.be/command-not-found-node-npm/)
 
+#下载
+>[scaffold2 uncompressed](https://raw.githubusercontent.com/shelter/baseline/master/scaffold2/dist/css/scaffold2.css)
+
+>[scaffold2 compressed](https://raw.githubusercontent.com/shelter/baseline/master/scaffold2/dist/css/scaffold2.min.css)
+
+
 
 
 
