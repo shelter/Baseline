@@ -240,6 +240,7 @@ th {
   }
 }
 .container {
+  _position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 940px;
@@ -1472,6 +1473,11 @@ th {
 .row:after {
   clear: both;
 }
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -1482,6 +1488,9 @@ th {
   .visible-lg-block {
     display: none !important;
   }
+}
+.visible-block {
+  display: block !important;
 }
 @media (max-width: 767px) {
   .visible-xs-block {
