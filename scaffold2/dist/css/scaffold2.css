@@ -1481,16 +1481,37 @@ th {
 @-ms-viewport {
   width: device-width;
 }
-@media (min-width: 0) {
-  .visible-xs-block,
-  .visible-sm-block,
-  .visible-md-block,
-  .visible-lg-block {
-    display: none !important;
-  }
+.visible-xs-block,
+.visible-sm-block,
+.visible-md-block,
+.visible-lg-block {
+  display: none !important;
 }
 .visible-block {
   display: block !important;
+}
+table.visible-block {
+  display: table;
+}
+tr.visible-block {
+  display: table-row !important;
+}
+th.visible-block,
+td.visible-block {
+  display: table-cell !important;
+}
+.visible-md-block {
+  display: block !important;
+}
+table.visible-md-block {
+  display: table;
+}
+tr.visible-md-block {
+  display: table-row !important;
+}
+th.visible-md-block,
+td.visible-md-block {
+  display: table-cell !important;
 }
 @media (max-width: 767px) {
   .visible-xs-block {

@@ -28,13 +28,15 @@
 .visible-sm-block,
 .visible-md-block,
 .visible-lg-block {
-    @media (min-width: 0) { // fix old version ie bug due to they don't support media queries
-        .responsive-invisibility();
-    }
+    .responsive-invisibility();
 }
 
 .visible-block {
-    display: block !important;
+    .responsive-visibility();
+}
+
+.visible-md-block {
+    .responsive-visibility();
 }
 
 .visible-xs-block {
